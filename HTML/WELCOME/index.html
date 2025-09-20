@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Gallery</title>
+</head>
+<body style="background-color: #2c2c2c; color: white; font-family: Arial; margin: 0; padding: 20px;">
+    
+    <table width="100%" cellpadding="10" cellspacing="0">
+        <tr>
+            <!-- Left Side - Movies Grid -->
+            <td width="60%" style="vertical-align: top;">
+                <table border="1" style="border-color: #666; background-color: #1a1a1a; width: 100%;" cellpadding="15" cellspacing="10">
+                    <!-- Row 1 -->
+                    <tr>
+                        <td style="text-align: center; background-color: #333; cursor: pointer;" onclick="showMovie('The Avengers', '8.0/10', 'English', 'Action, Adventure, Sci-Fi', 'Joss Whedon', '2012', 'https://tse2.mm.bing.net/th/id/OIP.1oHw0w1DKVgV7iTyU0xG_wHaEK?pid=Api&P=0&h=180')">
+                            <img src="https://tse2.mm.bing.net/th/id/OIP.1oHw0w1DKVgV7iTyU0xG_wHaEK?pid=Api&P=0&h=180" width="120" height="160"><br><br>
+                            <b>The Avengers</b>
+                        </td>
+                        <td style="text-align: center; background-color: #333; cursor: pointer;" onclick="showMovie('Inception', '8.8/10', 'English', 'Action, Sci-Fi, Thriller', 'Christopher Nolan', '2010', 'https://static1.moviewebimages.com/wordpress/wp-content/uploads/movie/i0DBDLhuWiY4ue0we5ebwb0W6gxRJF.jpg')">
+                            <img src="https://static1.moviewebimages.com/wordpress/wp-content/uploads/movie/i0DBDLhuWiY4ue0we5ebwb0W6gxRJF.jpg" width="120" height="160"><br><br>
+                            <b>Inception</b>
+                        </td>
+                        <td style="text-align: center; background-color: #333; cursor: pointer;" onclick="showMovie('Interstellar', '8.6/10', 'English', 'Adventure, Drama, Sci-Fi', 'Christopher Nolan', '2014', 'https://s3.amazonaws.com/nightjarprod/content/uploads/sites/130/2021/08/19085635/gEU2QniE6E77NI6lCU6MxlNBvIx-scaled.jpg')">
+                            <img src="https://s3.amazonaws.com/nightjarprod/content/uploads/sites/130/2021/08/19085635/gEU2QniE6E77NI6lCU6MxlNBvIx-scaled.jpg" width="120" height="160"><br><br>
+                            <b>Interstellar</b>
+                        </td>
+                        <td style="text-align: center; background-color: #333; cursor: pointer;" onclick="showMovie('The Dark Knight', '9.0/10', 'English', 'Action, Crime, Drama', 'Christopher Nolan', '2008', 'https://www.themoviedb.org/t/p/original/eP5NL7ZlGoW9tE9qnCdHpOLH1Ke.jpg')">
+                            <img src="https://www.themoviedb.org/t/p/original/eP5NL7ZlGoW9tE9qnCdHpOLH1Ke.jpg" width="120" height="160"><br><br>
+                            <b>The Dark Knight</b>
+                        </td>
+                    </tr>
+                    
+                    <!-- Row 2 -->
+                    <tr>
+                        <td style="text-align: center; background-color: #333; cursor: pointer;" onclick="showMovie('Pulp Fiction', '8.9/10', 'English', 'Crime, Drama', 'Quentin Tarantino', '1994', 'https://alternativemovieposters.com/wp-content/uploads/2021/04/RuizBurgos_PulpFiction.jpg')">
+                            <img src="https://alternativemovieposters.com/wp-content/uploads/2021/04/RuizBurgos_PulpFiction.jpg" width="120" height="160"><br><br>
+                            <b>Pulp Fiction</b>
+                        </td>
+                        <td style="text-align: center; background-color: #333; cursor: pointer;" onclick="showMovie('Forrest Gump', '8.8/10', 'English', 'Drama, Romance', 'Robert Zemeckis', '1994', 'https://m.media-amazon.com/images/S/pv-target-images/2d0c9e38968936e6711c7fb2bc7895b82d8bb9178b5a854e14dffa4b17b88487.jpg')">
+                            <img src="https://m.media-amazon.com/images/S/pv-target-images/2d0c9e38968936e6711c7fb2bc7895b82d8bb9178b5a854e14dffa4b17b88487.jpg" width="120" height="160"><br><br>
+                            <b>Forrest Gump</b>
+                        </td>
+                        <td style="text-align: center; background-color: #333; cursor: pointer;" onclick="showMovie('The Matrix', '8.7/10', 'English', 'Action, Sci-Fi', 'The Wachowskis', '1999', 'https://www.themoviedb.org/t/p/original/9Y0BY5JVjt201uRGRs4yTaEkspa.jpg')">
+                            <img src="https://www.themoviedb.org/t/p/original/9Y0BY5JVjt201uRGRs4yTaEkspa.jpg" width="120" height="160"><br><br>
+                            <b>The Matrix</b>
+                        </td>
+                        <td style="text-align: center; background-color: #333; cursor: pointer;" onclick="showMovie('Titanic', '7.8/10', 'English', 'Drama, Romance', 'James Cameron', '1997', 'https://image.tmdb.org/t/p/original/tr5y5H4qOlqCGbZKaT9Q97cscVj.jpg')">
+                            <img src="https://image.tmdb.org/t/p/original/tr5y5H4qOlqCGbZKaT9Q97cscVj.jpg" width="120" height="160"><br><br>
+                            <b>Titanic</b>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            
+            <!-- Right Side - Movie Details -->
+            <td width="40%" style="vertical-align: top; padding-left: 20px;">
+                <div id="movieDetailsContainer" style="display: none;">
+                    <table border="1" style="border-color: #666; background-color: #1a1a1a; width: 100%; height: 600px;" cellpadding="20">
+                        <tr>
+                            <td style="text-align: center; vertical-align: top;">
+                                <h2>Movie Details</h2>
+                                <hr style="color: #666;">
+                                <br>
+                                
+                                <img id="movieImage" src="" width="200" height="300">
+                                <br><br>
+                                
+                                <h3 id="movieTitle"></h3>
+                                <br>
+                                
+                                <b>Ratings - IMDB:</b> <span id="movieRating"></span>
+                                <br><br>
+                                
+                                <b>Language:</b> <span id="movieLanguage"></span>
+                                <br><br>
+                                
+                                <b>Genre:</b> <span id="movieGenre"></span>
+                                <br><br>
+                                
+                                <b>Director:</b> <span id="movieDirector"></span>
+                                <br><br>
+                                
+                                <b>Year:</b> <span id="movieYear"></span>
+                                <br><br>
+                                
+                                <hr style="color: #666;">
+                                <br>
+                                
+                                <h4>What do you think about the movie?</h4>
+                                <br>
+                                
+                                <textarea rows="4" cols="35" style="background-color: #333; color: white; border: 1px solid #666;">
+Write your review here...
+                                </textarea>
+                                <br><br>
+                                
+                                <button style="background-color: #666; color: white; border: none; padding: 10px 20px; cursor: pointer;">Submit Review</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function showMovie(title, rating, language, genre, director, year, image) {
+            // Show the entire movie details container
+            document.getElementById('movieDetailsContainer').style.display = 'block';
+            
+            // Update movie information
+            document.getElementById('movieTitle').innerHTML = title;
+            document.getElementById('movieRating').innerHTML = rating;
+            document.getElementById('movieLanguage').innerHTML = language;
+            document.getElementById('movieGenre').innerHTML = genre;
+            document.getElementById('movieDirector').innerHTML = director;
+            document.getElementById('movieYear').innerHTML = year;
+            document.getElementById('movieImage').src = image;
+        }
+    </script>
+
+</body>
+</html>
